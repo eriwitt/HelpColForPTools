@@ -67,7 +67,7 @@ These applications are based on the "GUI_addBiomassAndDrainsToSBML_v01.py" scrip
 
 Swe099eec_20181120.xml
 	
-	This is the Syntrophomonas wolfei SBML model created with Pathway Tools from the PGDB Swe099eec.
+	This is a SBML test file.
     
 crot.fba
     
