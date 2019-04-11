@@ -43,8 +43,8 @@ These applications are based on the "GUI_SanRoInput_v01.py" script which is stor
 ###Scripts#############################################################################################################################
 
 "CLI_SanRoInput_v01.py"
-	This is the command line version of the script that could be included in pipelines. To run the script furthe spectifications are 
-    necessary otherwise the script doesn't work.
+	This is the command line version of the script that could be included in pipelines. To run the script furthe spectifications 
+	are necessary otherwise the script doesn't work.
     
 		-genbank_annotation_path:		Enter the path of your GenBank annotation (e.g.: C:\Input\anno.gbk)
 		-storage_path:	        		Enter the path to store the output files (e.g.: C:\Output).
