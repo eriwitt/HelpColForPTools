@@ -55,8 +55,8 @@ These applications are based on the "GUI_SanRoInput_v01.py" script which is stor
 	e.g.:	python CLI_getpwymissingrxn_v01.py C:\Input\anno.gbk C:\Output 
 
 "GUI_SanRoInput_v01.py"
-	This is the graphical user interface guided version of the script "SanRoInput" controlled by the user. You can use the Executable 
-    (Executables directory) if you do not know how to deal with the Python file.
+	This is the graphical user interface guided version of the script "SanRoInput" controlled by the user. You can use the 
+	Executable (Executables directory) if you do not know how to deal with the Python file.
 
 	You can run it by using python 2.7: 
 		python GUI_SanRoInput_v01.py
@@ -66,8 +66,8 @@ These applications are based on the "GUI_SanRoInput_v01.py" script which is stor
 
 CP000448.1.gbk
 	
-	This includes the complete genome annotation of Syntrophomonas wolfei subsp. wolfei str. Goettingen G311 which can be found under:
-	https://www.ncbi.nlm.nih.gov/nuccore/CP000448
+	This includes the complete genome annotation of Syntrophomonas wolfei subsp. wolfei str. Goettingen G311 which can be found 
+	under: https://www.ncbi.nlm.nih.gov/nuccore/CP000448
 	
 
 #######################################################################################################################################
