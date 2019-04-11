@@ -33,8 +33,8 @@ These applications are based on the "GUI_getpwymissingrxn_v01.py" script which i
 ###Scripts#############################################################################################################################
 
 "CLI_getpwymissingrxn_v01.py"
-	This is the command line version of the script that could be included in pipelines. To run the script furthe spectifications are 
-    necessary otherwise the script doesn't work.
+	This is the command line version of the script that could be included in pipelines. To run the script furthe spectifications 
+	are necessary otherwise the script doesn't work.
 		-pathway_inference_report_path:		Enter the path of the pathway-inference-report produced by PathoLogic
 		-report_file_storage_path:	        Enter the path of your Report file (e.g.: C:\Output\report.txt).
 
@@ -44,8 +44,8 @@ These applications are based on the "GUI_getpwymissingrxn_v01.py" script which i
 	e.g.:	python CLI_getpwymissingrxn_v01.py C:\Input\pathway-inference-report.gbk C:\Output\report.txt 
 
 "GUI_getpwymissingrxn_v01.py"
-	This is the graphical user interface guided version of the script "gbkrefinement" controlled by the user. You can use the Executable 
-    (Executables directory) if you do not know how to deal with the Python file.
+	This is the graphical user interface guided version of the script "gbkrefinement" controlled by the user. You can use the 
+	Executable (Executables directory) if you do not know how to deal with the Python file.
 
 	You can run it by using python 2.7: 
 		python GUI_getpwymissingrxn_v01.py
