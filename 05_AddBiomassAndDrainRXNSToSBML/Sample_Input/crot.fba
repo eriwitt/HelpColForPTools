@@ -1,0 +1,377 @@
+pgdb: SWE099EEC
+# ======================================================================
+#								REACTIONS
+# ======================================================================
+reactions:
+
+metab-all
+transport-all
+
+remove-reactions:
+
+try-reactions:
+#metacyc-metab-all
+
+try-remove-reactions:
+
+# ======================================================================
+#								BIOMASS
+# ======================================================================
+
+biomass:
+#Amino Acids	
+L-ALPHA-ALANINE[CCO-CYTOSOL]	0.428140372
+CYS[CCO-CYTOSOL]	0.047486782
+L-ASPARTATE[CCO-CYTOSOL]	0.238013297
+GLT[CCO-CYTOSOL]	0.34246242
+PHE[CCO-CYTOSOL]	0.132695764
+GLY[CCO-CYTOSOL]	0.362315178
+HIS[CCO-CYTOSOL]	0.052213959
+ILE[CCO-CYTOSOL]	0.3178038
+LYS[CCO-CYTOSOL]	0.317419559
+LEU[CCO-CYTOSOL]	0.335397154
+MET[CCO-CYTOSOL]	0.132136166
+ASN[CCO-CYTOSOL]	0.16944176
+PRO[CCO-CYTOSOL]	0.169602185
+GLN[CCO-CYTOSOL]	0.137140259
+ARG[CCO-CYTOSOL]	0.197760686
+SER[CCO-CYTOSOL]	0.224932045
+THR[CCO-CYTOSOL]	0.234118611
+VAL[CCO-CYTOSOL]	0.355534315
+TRP[CCO-CYTOSOL]	0.030797774
+TYR[CCO-CYTOSOL]	0.10935384
+
+# Building Blocks DNA
+DATP[CCO-CYTOSOL]	0.01757443
+TTP[CCO-CYTOSOL]	0.017546056
+DGTP[CCO-CYTOSOL]	0.01417627
+DCTP[CCO-CYTOSOL]	0.014403398
+
+# Building Blocks RNA
+ATP[CCO-CYTOSOL]	19.10581815
+UTP[CCO-CYTOSOL]	0.081282332
+GTP[CCO-CYTOSOL]	0.127224696
+CTP[CCO-CYTOSOL]	0.095090155
+
+ADP[CCO-CYTOSOL]	18.99765377
+Pi[CCO-CYTOSOL]	18.99765377
+Proton[CCO-CYTOSOL]	18.99765377
+WATER[CCO-CYTOSOL]	18.99765377
+PPI[CCO-CYTOSOL]	0.063700153
+
+#Cofactors
+THIAMINE-PYROPHOSPHATE[CCO-CYTOSOL]	0.0000000049
+ADENOSYLCOBALAMIN[CCO-CYTOSOL]	0.0000000001
+BIOTIN[CCO-CYTOSOL]	0.0000000068
+LIPOIC-ACID[CCO-CYTOSOL]	0.0000000080
+MG+2[CCO-CYTOSOL]	0.0094956275
+CA+2[CCO-CYTOSOL]	0.0022543100
+MN+2[CCO-CYTOSOL]	0.0000010045
+CO+2[CCO-CYTOSOL]	0.0000055704
+CL-[CCO-CYTOSOL]	0.0972242454
+FE+2[CCO-CYTOSOL]	0.0000499985
+CO-A[CCO-CYTOSOL]	0.000576
+PYRIDOXAL_PHOSPHATE[CCO-CYTOSOL]	0.000223
+S-ADENOSYLMETHIONINE[CCO-CYTOSOL]	0.00001
+FAD[CCO-CYTOSOL]	0.000223
+NAD[CCO-CYTOSOL]	0.001831
+NADP[CCO-CYTOSOL]	0.000447
+SIROHEME[CCO-CYTOSOL]	0.000223
+
+
+#AMP[CCO-CYTOSOL]
+#CMP[CCO-CYTOSOL]
+#CDP[CCO-CYTOSOL]
+#GMP[CCO-CYTOSOL]
+#GDP[CCO-CYTOSOL]
+
+#Poly-Hydroxybutyrate:
+CPD-650[CCO-CYTOSOL]	0.320	#precursor of  Poly-Hydroxybutyrate
+
+#lipids:
+PALMITYL-COA[CCO-CYTOSOL]	0.003024
+STEAROYL-COA[CCO-CYTOSOL]	0.000189
+TETRADECANOYL-COA[CCO-CYTOSOL]	0.002268
+
+#Murein:
+C6[CCO-CYTOSOL]	0.013894
+
+try-biomass:
+#CPD-10269[CCO-CYTOSOL] 0.007182
+#THF-GLU-N[CCO-CYTOSOL]	0.000223
+#CPD-19144[CCO-CYTOSOL]	0.003024
+#CPD-18346[CCO-CYTOSOL]	0.000378
+
+# ======================================================================
+#								NUTRIENTS
+# ======================================================================
+
+nutrients:
+
+# Media
+
+#BUTYRIC_ACID[CCO-EXTRACELLULAR]
+CROTONATE[CCO-EXTRACELLULAR] :upper-bound 0.9258
+WATER[CCO-EXTRACELLULAR]
+
+Pi[CCO-EXTRACELLULAR]
+AMMONIUM[CCO-EXTRACELLULAR]
+SULFATE[CCO-EXTRACELLULAR] 
+K+[CCO-EXTRACELLULAR] 
+MG+2[CCO-EXTRACELLULAR] 
+CA+2[CCO-EXTRACELLULAR] 
+MN+2[CCO-EXTRACELLULAR] 
+FE+2[CCO-EXTRACELLULAR] 
+CO+2[CCO-EXTRACELLULAR] 
+CL-[CCO-EXTRACELLULAR] 
+
+## Vitamins
+THIAMINE[CCO-EXTRACELLULAR] 
+COB-I-ALAMIN[CCO-EXTRACELLULAR] 
+P-AMINO-BENZOATE[CCO-EXTRACELLULAR] 
+LIPOIC-ACID[CCO-EXTRACELLULAR] 
+BIOTIN[CCO-EXTRACELLULAR] 
+
+## cysteine-sulfide reducing agent produces HS
+
+HS[CCO-EXTRACELLULAR] #:upper-bound 1.04
+
+# anaerobic environment
+
+CARBON-DIOXIDE[CCO-EXTRACELLULAR]	#:upper-bound 20
+NITROGEN-MOLECULE[CCO-EXTRACELLULAR] #:upper-bound 80
+
+L-Cysteine-Desulfurases[CCO-CYTOSOL] # 2.8.1.7 --> for ala-synthesis
+
+try-nutrients:
+
+# ======================================================================
+#								SECRETIONS
+# ======================================================================
+
+secretions:
+
+Persulfurated-L-cysteine-desulfurases[CCO-CYTOSOL] # 2.8.1.7
+ACET[CCO-EXTRACELLULAR] :lower-bound 1.9840
+BUTYRIC_ACID[CCO-EXTRACELLULAR] :lower-bound 0.1824
+FUM[CCO-CYTOSOL] 
+ADENOSINE[CCO-CYTOSOL] 
+PROTON[CCO-CYTOSOL] :upper-bound 24.0
+HYDROXYLAMINE[CCO-CYTOSOL] 
+try-secretions:
+
+#all-compounds[CCO-CYTOSOL]
+
+# ======================================================================
+#              Reversing Reactions in Developement Mode?
+# ======================================================================
+
+# Add, to the try-reactions set, the reverse of irreversible reactions 
+# provided by the reactions parameter? If set to 'yes' you will be in
+# development mode, not in solving mode.
+
+try-add-reverse-rxns: no
+
+# Add, to the try-reactions set, the reverse of irreversible reactions 
+# provided by parameter try-reactions?
+
+try-add-reverse-try-rxns: no
+
+# ======================================================================
+#             Fast Development Mode?
+# ======================================================================
+
+# You can use 'yes' or 'no'.
+
+fast-development-mode: no
+
+# =====================================================================
+#           Objectives for General Development Mode
+# =====================================================================
+
+# The try-optimize parameter is the RECOMMENDED way to control the
+# desired result of general development mode. It consists in
+# specifying for each try set if it should be minimized or maximized,
+# the priority of optimization (e.g., should the number of biomass
+# metabolites be maximized before minimizing the number of try
+# reactions to add), and the upper/lower bounds on the numbers of
+# suggested elements to add to a try-set. For each try set, the upper
+# bound specifies a maximum number of elements to suggest to add whereas a
+# lower bound specifies a minimum number of elements to suggest to add. 
+#
+# IMPORTANT: The try-optimize parameter overrides many of the weights specified 
+# under the banner "Try-Set Weights for Advanced Users". See that section
+# for more details.
+#
+# Note: this try-optimize specification becomes effective if at least
+#       one non empty try set is specified in this file, 
+#       such as try-biomass.
+#
+# If no upper-bound is specified for a try set, a default is used:
+#
+#        try-biomass,     default to :upper-bound 200
+#        try-reactions,   default to :upper-bound 50
+#        try-secretions,  default to :upper-bound 20
+#        try-nutrients,   default to :upper-bound 20
+#
+# All lower-bound values default to 0.
+#
+# The following try-optimize parameter is the default.
+#
+try-optimize:
+    maximize try-biomass      :lower-bound 0 :upper-bound 2000
+    minimize try-reactions    :lower-bound 0 :upper-bound 50
+    minimize try-nutrients    :lower-bound 0 :upper-bound 20
+    minimize try-secretions   :lower-bound 0 :upper-bound 200
+
+# ======================================================================
+#             Gene/Reaction Knockout Sections
+# ======================================================================
+
+# These parameters are for the gene/reaction knockout mode of MetaFlux.
+# Remove the '#' character in front of the desired parameter
+# names that follow to use this mode.
+
+# For knockout-genes, list the genes to knockout. Genes can be speficied in
+# three ways: by names, by unique identifiers (i.e., frame ids), and by
+# the special keywords 'metab-genes' or 'all-genes' (case insensitive). 
+
+# knockout-genes:
+# metab-genes
+
+# For knockout-reactions, specify the reactions to knockout. Reactions
+# can be specified by unique identifiers or by using the special
+# keyword metab-all which refers to the set of all metabolic reactions
+# in the specified PGDB.
+
+# knockout-reactions:
+
+# For knockout-nb-genes a single integer must be specified. Its value
+# can be positive or zero.  This integer is the number of genes to
+# knockout *simultaneously* from the set of genes specified in parameter
+# knockout-genes.
+
+# knockout-nb-genes: 1    # remove the first '#' to do gene knockout.
+
+# For knockout-nb-reactions a single integer must be specified. This
+# integer is the number of reactions to knockout *simultaneously* from
+# the set of reactions specified for parameter knockout-reactions.
+
+# knockout-nb-reactions: 0  # remove the fist '#' to do reaction knockout.
+
+# For knockout-summary-only either the word 'yes' or 'no'
+# (case-insensitive) must be specified. If omitted, 'yes' is
+# assumed. If 'yes', only a summary of the knockout
+# solutions is provided in one solution file.
+
+# knockout-summary-only: yes
+
+# =====================================================================
+#                        Miscellaneous Parameters
+# =====================================================================
+
+# The maximum number of seconds to let the solver run. If the solver
+# has not optimally solved the model after that time, a suboptimal solution
+# will be reported.
+
+max-time-solver: 600
+
+# Specify yes for minimize-fluxes if you want the objective function to also
+# minimize the sum of all fluxes.
+
+minimize-fluxes: yes
+
+# Sometimes, the log file can take a long time to be produced and you might want
+# to turn off its production if you are confident that your model is fine or that the
+# log file will not provide any new information.
+# Set log-file to yes if you want a .log file to be produced; otherwise set it to no.
+
+log-file: yes
+
+# Some reactions have no curated direction stored in the PGDB.
+# In such a case, the direction might be inferred using other information
+# available in the PGDB, such as pathways. If the following parameter
+# is set to 'yes', no such inference is applied, and all non-curated
+# reactions are assumed to be reversible. Default to no.
+# If 'yes', all reactions that are active in a different direction
+# than the inferred one will be reported in the solution file. Some of
+# these reactions might be candidates for a curated direction.
+# This parameter can be used in any mode.
+
+treat-rxns-without-dir-reversible: no
+
+
+# ======================================================================
+#           Try-Set Weights for Advanced Users
+# ======================================================================
+
+# IMPORTANTE NOTE: if the try-optimize parameter is given above, many of the
+# following weight specifications are NOT taken into account. See each weight
+# parameter below for details.
+
+# This section is for advanced users because it is most likely that
+# the try-optimize parameter can do exactly what you want. The following
+# weights can be changed if you want to fine tune the development
+# mode beyond what the try-optimize parameter provides.
+
+# If all try-sets are empty, the weights are not used. In other
+# words, a weight is only useful in development mode, not in solving
+# mode.  A weight is only meaningful if a corresponding try set is
+# specified for it. 
+
+# The weight of adding one metabolite to the biomass. 
+# Typically, this value is positive and at least ten times larger, 
+# in absolute value, than all the other weights.
+# Note: this weight is overriden by the try-optimize parameter.
+
+try-biomass-weight: 10000
+
+# The cost for adding one nutrient. This value is typically a small negative value (cost).
+# Note: this weight is overriden by the try-optimize parameter.
+
+try-nutrients-weight: -20
+
+# The weight for adding a secretion to the model.  This value is typically negative.
+# Note: this weight is overriden by the try-optimize parameter.
+
+try-secretions-weight: -2
+
+# The cost for adding one reaction outside the taxonomic range of the PGDB from MetaCyc to the model.
+# This value is typically negative (cost).
+# Note: this weight is overriden by the try-optimize parameter.
+
+try-reactions-weight: -200
+
+# The weight for adding the reverse of a irreversible reaction from
+# the PGDB to the model. This value is typically negative (cost).
+
+try-reactions-reverse-weight: -40
+
+# The weight for adding the reverse of an irreversible reaction from
+# MetaCyc to the model. This value is typically negative (cost).
+
+try-reactions-reverse-try-weight: -250
+
+# The weight for adding one reaction within the taxonomic range of the PGDB from MetaCyc to the model. 
+# This value is typically negative (cost).
+# Note: this weight is overriden by the try-optimize parameter.
+
+try-reactions-in-taxa-weight: -40
+
+# The weight for adding one reaction from MetaCyc with an unknown taxonomic range.
+# This value is typically negative (cost).
+# Note: this weight is overriden by the try-optimize parameter.
+
+try-reactions-unknown-taxa-weight: -80
+
+# The weight for adding a spontaneous reactions. 
+# This value should be a small negative numbers such as -1.
+
+try-reactions-spontaneous-weight: -1
+
+# The weight for adding a transport reaction from MetaCyc to the model.
+# This value is typically negative (cost).
+
+try-transport-reactions-weight: -300
+
+# End of Template File

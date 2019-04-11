@@ -1,0 +1,299 @@
+https://www.kegg.jp/dbget-bin/www_bget?eco:b0383	2019-02-07 08:52:16.192000
+<!doctype html>
+<html><head>
+<title>KEGG T00007: b0383</title>
+<link type="text/css" rel="stylesheet" href="/css/gn2.css?1549525935">
+<link type="text/css" rel="stylesheet" href="/css/bget.css?1549525935">
+<link rel="stylesheet" href="/css/bget.css?1549525935" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/css/bgetm.css?1549525935" media="only screen and (max-width: 768px)">
+<style>.kcfd{display:none;}</style>
+<script>
+<!--
+var getElementsByClassName = document.getElementsByClassName ?
+  function (cl){
+    return document.getElementsByClassName(cl);
+  } :
+  function (cl){
+    var elms = [];
+    var objs = document.getElementsByTagName('*');
+    for(var i=0;i<objs.length;i++){
+      var obj = objs[i];
+      if(obj.className == cl){
+        elms.push(obj);
+      }
+    }
+    return elms;
+  };
+function toggleField(clk,cl,show,hide){
+  var objs = getElementsByClassName(cl);
+  for(var i=0;i<objs.length;i++){
+    var obj = objs[i];
+    if(!obj.style.display||obj.style.display == 'none'){
+      obj.style.display = 'block';
+      clk.innerHTML = '&nbsp;&laquo; '+hide;
+    }
+    else{
+      obj.style.display = 'none';
+      clk.innerHTML = '&nbsp;&raquo; '+show;
+    }
+  }
+}
+function toggleData(bobj,e){
+  var id = bobj.id.replace(/[^0-9]/g,'');
+  var dt = document.getElementById('kcfd'+id);
+  if(!dt.style.display||dt.style.display == 'none'){
+    bobj.name = 'hide_kcf';
+    bobj.alt = 'Hide';
+    bobj.src = '/Fig/bget/button_Hib.gif';
+    dt.style.display = 'block';
+  }
+  else{
+    bobj.name = 'show_kcf';
+    bobj.alt = 'Show';
+    bobj.src = '/Fig/bget/button_Sb.gif';
+    dt.style.display = 'none';
+  }
+}
+function btn(bobj,img) {
+  bobj.src = "/Fig/bget/button_" + img + ".gif";
+}
+function btn_e(e) {
+  e = e || event;
+  var obj = e.target;
+  var img = e.target.src;
+  var img_base = img.replace(/\\/g,'/').replace(/(b|bd|bh)\.gif$/,'');
+  if(e.type == 'mousedown'||e.type == 'touchstart'){
+    obj.src = img_base +'bd.gif';
+  }
+  else if(e.type == 'mouseover'){
+    obj.src = img_base +'bh.gif';
+  }
+  else if(e.type == 'mouseup'||e.type == 'touchend'){
+    obj.src = img_base +'b.gif';
+  }
+  else if(e.type == 'mouseout'){
+    obj.src = img_base +'b.gif';
+  }
+}
+function init(){
+  for(var i=1;i<=1;i++){
+    if(document.getElementById('kcfb'+i)){
+      document.getElementById('kcfb'+i).onclick = function(e){toggleData(this,e);};
+      document.getElementById('kcfb'+i).onmousedown = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseover = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseout = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).onmouseup = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).ontouchstart = function(e){btn_e(e);};
+      document.getElementById('kcfb'+i).ontouchend = function(e){btn_e(e);};
+    }
+  }
+}
+function Link_XtrctSeq2(form) {
+    var dna_from;
+    var dna_to;
+    var dna_len;
+    var plus_up   = Number(form.XtrctSeq_UP.value) ;
+    var plus_down = Number(form.XtrctSeq_DOWN.value);
+    var vector    = Number(form.VECTOR.value);
+    var org       = form.ORG.value;
+    var chr       = form.CHR.value;
+    var kid       = form.KEGGID.value;
+    var url;
+
+    if (plus_up == 0 && plus_down == 0) {
+  url = "/dbget-bin/www_bget?-f+-n+n+" + kid;
+    }
+    else {
+  if (vector == 1) {
+      dna_from  = Number(form.FROM.value)  - plus_up;
+      dna_to    = Number(form.TO.value) + plus_down;
+  } else {
+      dna_from  = Number(form.FROM.value)  - plus_down;
+      dna_to    = Number(form.TO.value) + plus_up;
+  }
+
+  url = "https://www.genome.jp/dbget-bin/cut_sequence_genes.pl?FROM=" + dna_from + "&TO=" + dna_to +"&VECTOR=" + vector + "&ORG=" + org;
+  if (chr) url += "&CHR=" + chr;
+    }
+    //window.open( url, "_self" );
+    location.href = url;
+}
+function go_taxonomy(form,params){
+  for(var key in params){
+    if(form[key]){
+      form.setAttribute(key,params[key]);
+    }
+    else{
+      var obj = document.createElement('input');
+      obj.setAttribute('type','hidden');
+      obj.setAttribute('name',key);
+      obj.setAttribute('value',params[key]);
+      form.appendChild(obj);
+    }
+  }
+  form.submit();
+}
+window.onload=function(){window.focus();init();};
+//--->
+</script>
+
+</head>
+<body>
+<div>
+
+<table border=0 cellpadding=0 cellspacing=0><tr><td>
+<table border=0 cellpadding=0 cellspacing=0 width="650"><tr><td width=70><a href="/kegg/kegg2.html"><img align="middle" alt="KEGG" border=0 src="/Fig/bget/kegg1.gif"></a></td><td>&nbsp;&nbsp;&nbsp;</td><td><a name="eco:b0383"></a><font class="title1">Escherichia coli K-12 MG1655: b0383</font></td><td align="right" valign="bottom"><a href="javascript:void(window.open('/kegg/document/help_bget_genes.html','KEGG_Help','toolbar=no,location=no,directories=no,width=720,height=640,resizable=yes,scrollbars=yes'))"><img align="middle" alt="Help" border="0" name="help" onmousedown="btn(this,'Hbd')" onmouseout="btn(this,'Hb')" onmouseover="btn(this,'Hbh')" onmouseup="btn(this,'Hb')" ontouchend="btn(this,'Hb')" ontouchstart="btn(this,'Hbd')" src="/Fig/bget/button_Hb.gif"></a></td></tr></table><table border=0 cellpadding=0 cellspacing=0><tr><td valign="top">
+<form method="post" action="javascript:Link_XtrctSeq2(document.form1);" enctype="application/x-www-form-urlencoded" name="form1"><input type="hidden" name="ACCESSION" value="b0383" >
+<input type="hidden" name="KEGGID" value="eco:b0383" >
+<input type="hidden" name="ORG" value="eco" >
+<input type="hidden" name="FROM" value="401747" >
+<input type="hidden" name="TO" value="403162" >
+<input type="hidden" name="VECTOR" value="1" >
+<input type="hidden" name="CHR" value="" >
+<input type="hidden" name="source" value="OPEN" >
+<input type="hidden" name="pos" value="401747..403162" >
+<table border=0 cellpadding=1 cellspacing=0 width="650">
+<tr>
+<td class="fr1">
+<table border=0 cellpadding=2 cellspacing=0 width="650" style="border-bottom:#000 1px solid">
+
+<tr><th class="th10" align="left" valign="middle" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Entry</nobr></th>
+<td class="td10" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table border="0" cellpadding="0" cellspacing="0" width="555"><tr><td align="left"><code><nobr>b0383&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/kegg-bin/show_organism?org=T00007">T00007</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+</nobr></code></td><td align="right"><br></td></tr></table></td></tr>
+
+
+<tr><th class="th11" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Gene name</nobr></th>
+<td class="td11" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden">phoA<br>
+</div></td></tr>
+
+
+<tr><th class="th10" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Definition</nobr></th>
+<td class="td10" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><div style="width:555px;overflow-x:auto;overflow-y:hidden">(RefSeq) alkaline phosphatase<br>
+</div></div></td></tr>
+
+
+<tr><th class="th11" align="left" valign="top" style="border-color:#000; border-width: 0px 0px 0px 1px; border-style: solid"><nobr>&nbsp;&nbsp;KO</nobr></th>
+<td class="td11" style="border-color:#000; border-width: 0px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr><a href="/dbget-bin/www_bget?ko:K01077">K01077</a>&nbsp;&nbsp;</nobr></td><td>alkaline phosphatase [EC:<a href="/dbget-bin/www_bget?ec:3.1.3.1">3.1.3.1</a>]</td></tr></table></div></td></tr>
+
+
+<tr><th class="th10" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Organism</nobr></th>
+<td class="td10" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><a href="/kegg-bin/show_organism?org=eco">eco</a>&nbsp;&nbsp;Escherichia coli K-12 MG1655<br>
+</div></td></tr>
+
+
+<tr><th class="th11" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Pathway</nobr></th>
+<td class="td11" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr><a href="/kegg-bin/show_pathway?eco00730+b0383">eco00730</a>&nbsp;&nbsp;</nobr></td><td>Thiamine metabolism</td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr><a href="/kegg-bin/show_pathway?eco00790+b0383">eco00790</a>&nbsp;&nbsp;</nobr></td><td>Folate biosynthesis</td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr><a href="/kegg-bin/show_pathway?eco01100+b0383">eco01100</a>&nbsp;&nbsp;</nobr></td><td>Metabolic pathways</td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr><a href="/kegg-bin/show_pathway?eco02020+b0383">eco02020</a>&nbsp;&nbsp;</nobr></td><td>Two-component system</td></tr></table></td></tr>
+
+
+<tr><th class="th10" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Module</nobr></th>
+<td class="td10" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr><a href="/kegg-bin/show_module?eco_M00126+b0383">eco_M00126</a>&nbsp;&nbsp;</nobr></td><td>Tetrahydrofolate biosynthesis, GTP =&gt; THF</td></tr></table></td></tr>
+
+
+<tr><th class="th11" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Brite</nobr></th>
+<td class="td11" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden"><nobr>KEGG Orthology (KO) [BR:<a href="/kegg-bin/get_htext?eco00001+b0383">eco00001</a>]<br>
+&nbsp;09100 Metabolism<br>
+&nbsp;&nbsp;09108 Metabolism of cofactors and vitamins<br>
+&nbsp;&nbsp;&nbsp;00730 Thiamine metabolism<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b0383 (phoA)<br>
+&nbsp;&nbsp;&nbsp;00790 Folate biosynthesis<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b0383 (phoA)<br>
+&nbsp;09130 Environmental Information Processing<br>
+&nbsp;&nbsp;09132 Signal transduction<br>
+&nbsp;&nbsp;&nbsp;02020 Two-component system<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b0383 (phoA)<br>
+&nbsp;09180 Brite Hierarchies<br>
+&nbsp;&nbsp;09183 Protein families: signaling and cellular processes<br>
+&nbsp;&nbsp;&nbsp;04147 Exosome [BR:<a href="/kegg-bin/get_htext?eco04147+b0383">eco04147</a>]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b0383 (phoA)<br>
+&nbsp;&nbsp;&nbsp;00537 Glycosylphosphatidylinositol (GPI)-anchored proteins [BR:<a href="/kegg-bin/get_htext?eco00537+b0383">eco00537</a>]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;b0383 (phoA)<br>
+Enzymes [BR:<a href="/kegg-bin/get_htext?eco01000+b0383">eco01000</a>]<br>
+&nbsp;3. Hydrolases<br>
+&nbsp;&nbsp;3.1&nbsp;&nbsp;Acting on ester bonds<br>
+&nbsp;&nbsp;&nbsp;3.1.3&nbsp;&nbsp;Phosphoric-monoester hydrolases<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3.1.3.1&nbsp;&nbsp;alkaline phosphatase<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b0383 (phoA)<br>
+Exosome [BR:<a href="/kegg-bin/get_htext?eco04147+b0383">eco04147</a>]<br>
+&nbsp;Exosomal proteins<br>
+&nbsp;&nbsp;Exosomal proteins of other body fluids (saliva and urine)<br>
+&nbsp;&nbsp;&nbsp;b0383 (phoA)<br>
+Glycosylphosphatidylinositol (GPI)-anchored proteins [BR:<a href="/kegg-bin/get_htext?eco00537+b0383">eco00537</a>]<br>
+&nbsp;Enzymes<br>
+&nbsp;&nbsp;b0383 (phoA)<br>
+</nobr></div><a href="/kegg-bin/search_brite?option=-a&amp;search_string=b0383&amp;prefix=eco"><img align="middle" alt="BRITE hierarchy" border="0" name="BRH" onmousedown="btn(this,'BHbd')" onmouseout="btn(this,'BHb')" onmouseover="btn(this,'BHbh')" onmouseup="btn(this,'BHb')" ontouchend="btn(this,'BHb')" ontouchstart="btn(this,'BHbd')" src="/Fig/bget/button_BHb.gif"></a></td></tr>
+
+
+<tr><th class="th10" align="left" valign="middle" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>SSDB</nobr></th>
+<td class="td10" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><a href="https://www.kegg.jp/ssdb-bin/ssdb_best?org_gene=eco:b0383"><img align="middle" alt="Ortholog" border="0" name="OC" onmousedown="btn(this,'Obd')" onmouseout="btn(this,'Ob')" onmouseover="btn(this,'Obh')" onmouseup="btn(this,'Ob')" ontouchend="btn(this,'Ob')" ontouchstart="btn(this,'Obd')" src="/Fig/bget/button_Ob.gif"></a><a href="https://www.kegg.jp/ssdb-bin/ssdb_paralog?org_gene=eco:b0383"><img align="middle" alt="Paralog" border="0" name="PC" onmousedown="btn(this,'Pbd')" onmouseout="btn(this,'Pb')" onmouseover="btn(this,'Pbh')" onmouseup="btn(this,'Pb')" ontouchend="btn(this,'Pb')" ontouchstart="btn(this,'Pbd')" src="/Fig/bget/button_Pb.gif"></a><a href="https://www.kegg.jp/ssdb-bin/ssdb_gclust?org_gene=eco:b0383"><img align="middle" alt="Gene cluster" border="0" name="GC" onmousedown="btn(this,'GCbd')" onmouseout="btn(this,'GCb')" onmouseover="btn(this,'GCbh')" onmouseup="btn(this,'GCb')" ontouchend="btn(this,'GCb')" ontouchstart="btn(this,'GCbd')" src="/Fig/bget/button_GCb.gif"></a><a href="https://www.kegg.jp/ssdb-bin/www_ssget?eco:b0383"><img align="middle" alt="GFIT" border="0" name="GFIT" onmousedown="btn(this,'GFITbd')" onmouseout="btn(this,'GFITb')" onmouseover="btn(this,'GFITbh')" onmouseup="btn(this,'GFITb')" ontouchend="btn(this,'GFITb')" ontouchstart="btn(this,'GFITbd')" src="/Fig/bget/button_GFITb.gif"></a></td></tr>
+
+
+<tr><th class="th11" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Motif</nobr></th>
+<td class="td11" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr>Pfam:&nbsp;</nobr></td><td><a href="https://www.genome.jp/dbget-bin/www_bget?pfam:Alk_phosphatase">Alk_phosphatase</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pfam:Metalloenzyme">Metalloenzyme</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pfam:Sulfatase">Sulfatase</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pfam:Phosphodiest">Phosphodiest</a></td></tr></table><a href="https://www.kegg.jp/ssdb-bin/ssdb_motif?kid=eco:b0383"><img align="middle" alt="Motif" border="0" name="PD" onmousedown="btn(this,'Mbd')" onmouseout="btn(this,'Mb')" onmouseover="btn(this,'Mbh')" onmouseup="btn(this,'Mb')" ontouchend="btn(this,'Mb')" ontouchstart="btn(this,'Mbd')" src="/Fig/bget/button_Mb.gif"></a></td></tr>
+
+
+<tr><th class="th10" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Other DBs</nobr></th>
+<td class="td10" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr>NCBI-GeneID:&nbsp;</nobr></td><td><a href="https://www.ncbi.nlm.nih.gov/gene/945041">945041</a></td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr>NCBI-ProteinID:&nbsp;</nobr></td><td><a href="https://www.ncbi.nlm.nih.gov/protein/NP_414917">NP_414917</a></td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr>Pasteur:&nbsp;</nobr></td><td><a href="http://genolist.pasteur.fr/Colibri/genome.cgi?external_query+phoA">phoA</a></td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr>RegulonDB:&nbsp;</nobr></td><td><a href="http://regulondb.ccg.unam.mx/gene?term=ECK120000718&organism=ECK12&format=jsp&type=gene">ECK120000718</a></td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr>ECOCYC:&nbsp;</nobr></td><td><a href="https://biocyc.org/gene?orgid=ECOLI&id=EG10727">EG10727</a></td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr>ASAP:&nbsp;</nobr></td><td><a href="http://asap.ahabs.wisc.edu/asap/feature_info.php?FeatureID=ABE-0001328">ABE-0001328</a></td></tr></table><table style="border:0;border-collapse:collapse;"><tr><td valign="top"><nobr>UniProt:&nbsp;</nobr></td><td><a href="https://www.uniprot.org/uniprot/P00634">P00634</a> <a href="https://www.uniprot.org/uniprot/A0A387D4A2">A0A387D4A2</a></td></tr></table></td></tr>
+
+
+<tr><th class="th11" align="left" valign="middle" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>LinkDB</nobr></th>
+<td class="td11" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><a href="https://www.genome.jp/dbget-bin/get_linkdb?eco+b0383"><img align="middle" alt="All DBs" border="0" name="alldbs" onmousedown="btn(this,'ADbd')" onmouseout="btn(this,'ADb')" onmouseover="btn(this,'ADbh')" onmouseup="btn(this,'ADb')" ontouchend="btn(this,'ADb')" ontouchstart="btn(this,'ADbd')" src="/Fig/bget/button_ADb.gif"></a></td></tr>
+
+
+<tr><th class="th10" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Structure</nobr></th>
+<td class="td10" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="float:left">PDB:&nbsp;</div><div style="max-width:23.5em;float:left"><a href="https://www.genome.jp/dbget-bin/www_bget?pdb:3TG0">3TG0</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:3BDF">3BDF</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:3BDG">3BDG</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1Y6V">1Y6V</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ED8">1ED8</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ED9">1ED9</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1Y7A">1Y7A</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:3BDH">3BDH</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1B8J">1B8J</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:2G9Y">2G9Y</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1KH5">1KH5</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1EW9">1EW9</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ALK">1ALK</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:5C66">5C66</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1URA">1URA</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:3CMR">3CMR</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1URB">1URB</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:2GA3">2GA3</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1EW8">1EW8</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ALI">1ALI</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:4YR1">4YR1</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1HQA">1HQA</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:3DYC">3DYC</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:3DPC">3DPC</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1KHJ">1KHJ</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1HJK">1HJK</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ANJ">1ANJ</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1KH4">1KH4</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1KH7">1KH7</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:2ANH">2ANH</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:5TPQ">5TPQ</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1KHK">1KHK</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1KHL">1KHL</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1KH9">1KH9</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ANI">1ANI</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1AJA">1AJA</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1AJB">1AJB</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1AJD">1AJD</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1AJC">1AJC</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ALH">1ALH</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1KHN">1KHN</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ELX">1ELX</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ALJ">1ALJ</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:4KM4">4KM4</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ELY">1ELY</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:1ELZ">1ELZ</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:5JTL">5JTL</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:5JTM">5JTM</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:5JTN">5JTN</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:5JTO">5JTO</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:5JTP">5JTP</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:2MLX">2MLX</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:2MLY">2MLY</a> <a href="https://www.genome.jp/dbget-bin/www_bget?pdb:2MLZ">2MLZ</a><br><a href="https://www.genome.jp/dbget-bin/pdb_list.cgi?eco:b0383"><img align="middle" alt="Thumbnails" border="0" name="Thumbnails" onmousedown="btn(this,'Thumbd')" onmouseout="btn(this,'Thumb')" onmouseover="btn(this,'Thumbh')" onmouseup="btn(this,'Thumb')" ontouchend="btn(this,'Thumb')" ontouchstart="btn(this,'Thumbd')" src="/Fig/bget/button_Thumb.gif"></a></div><div style="padding-left:10px;float:left"><div><a href="https://www.genome.jp/Fig/pdb/pdb3tg0.png"><img name="img0" src="/Fig/pdb_small1/pdb3tg0_icon_100.png" border=0></a><br>
+</div></div></td></tr>
+
+
+<tr><th class="th11" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>Position</nobr></th>
+<td class="td11" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid"><div style="width:555px;overflow-x:auto;overflow-y:hidden">401747..403162<br>
+</div><a href="/kegg-bin/show_genomemap?ORG=eco&amp;ACCESSION=b0383"><img align="middle" alt="Genome map" border="0" name="GM" onmousedown="btn(this,'GMbd')" onmouseout="btn(this,'GMb')" onmouseover="btn(this,'GMbh')" onmouseup="btn(this,'GMb')" ontouchend="btn(this,'GMb')" ontouchstart="btn(this,'GMbd')" src="/Fig/bget/button_GMb.gif"></a></td></tr>
+
+
+<tr><th class="th10" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>AA seq</nobr></th>
+<td class="td10" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid">471 aa <a href="/dbget-bin/www_bget?-f+-n+a+eco:b0383"><img align="middle" alt="AA seq" border="0" name="XtrctA" onmousedown="btn(this,'Abd')" onmouseout="btn(this,'Ab')" onmouseover="btn(this,'Abh')" onmouseup="btn(this,'Ab')" ontouchend="btn(this,'Ab')" ontouchstart="btn(this,'Abd')" src="/Fig/bget/button_Ab.gif"></a><a href="https://www.genome.jp/tools-bin/search_sequence?prog=blast&amp;seqid=eco:b0383+aa"><img align="middle" alt="DB search" border="0" name="blast" onmousedown="btn(this,'Dsbd')" onmouseout="btn(this,'Dsb')" onmouseover="btn(this,'Dsbh')" onmouseup="btn(this,'Dsb')" ontouchend="btn(this,'Dsb')" ontouchstart="btn(this,'Dsbd')" src="/Fig/bget/button_Dsb.gif"></a><br>
+MKQSTIALALLPLLFTPVTKARTPEMPVLENRAAQGDITAPGGARRLTGDQTAALRDSLS<br>
+DKPAKNIILLIGDGMGDSEITAARNYAEGAGGFFKGIDALPLTGQYTHYALNKKTGKPDY<br>
+VTDSAASATAWSTGVKTYNGALGVDIHEKDHPTILEMAKAAGLATGNVSTAELQDATPAA<br>
+LVAHVTSRKCYGPSATSEKCPGNALEKGGKGSITEQLLNARADVTLGGGAKTFAETATAG<br>
+EWQGKTLREQAQARGYQLVSDAASLNSVTEANQQKPLLGLFADGNMPVRWLGPKATYHGN<br>
+IDKPAVTCTPNPQRNDSVPTLAQMTDKAIELLSKNEKGFFLQVEGASIDKQDHAANPCGQ<br>
+IGETVDLDEAVQRALEFAKKEGNTLVIVTADHAHASQIVAPDTKAPGLTQALNTKDGAVM<br>
+VMSYGNSEEDSQEHTGSQLRIAAYGPHAANVVGLTDQTDLFYTMKAALGLK</td></tr>
+
+
+<tr><th class="th11" align="left" valign="top" style="border-color:#000; border-width: 1px 0px 0px 1px; border-style: solid"><nobr>NT seq</nobr></th>
+<td class="td11" style="border-color:#000; border-width: 1px 1px 0px 1px; border-style: solid">1416 nt <a href="javascript:Link_XtrctSeq2(document.form1)"><img align="middle" alt="NT seq" border="0" name="Xtrct2" onmousedown="btn(this,'Nbd')" onmouseout="btn(this,'Nb')" onmouseover="btn(this,'Nbh')" onmouseup="btn(this,'Nb')" ontouchend="btn(this,'Nb')" ontouchstart="btn(this,'Nbd')" src="/Fig/bget/button_Nb.gif"></a><code>&nbsp;&nbsp;+upstream<input type="text" name="XtrctSeq_UP" value="0" size="3">nt&nbsp;&nbsp;+downstream<input type="text" name="XtrctSeq_DOWN" value="0" size="3">nt</code><br>
+gtgaaacaaagcactattgcactggcactcttaccgttactgtttacccctgtgacaaaa<br>
+gcccggacaccagaaatgcctgttctggaaaaccgggctgctcagggcgatattactgca<br>
+cccggcggtgctcgccgtttaacgggtgatcagactgccgctctgcgtgattctcttagc<br>
+gataaacctgcaaaaaatattattttgctgattggcgatgggatgggggactcggaaatt<br>
+actgccgcacgtaattatgccgaaggtgcgggcggcttttttaaaggtatagatgcctta<br>
+ccgcttaccgggcaatacactcactatgcgctgaataaaaaaaccggcaaaccggactac<br>
+gtcaccgactcggctgcatcagcaaccgcctggtcaaccggtgtcaaaacctataacggc<br>
+gcgctgggcgtcgatattcacgaaaaagatcacccaacgattctggaaatggcaaaagcc<br>
+gcaggtctggcgaccggtaacgtttctaccgcagagttgcaggatgccacgcccgctgcg<br>
+ctggtggcacatgtgacctcgcgcaaatgctacggtccgagcgcgaccagtgaaaaatgt<br>
+ccgggtaacgctctggaaaaaggcggaaaaggatcgattaccgaacagctgcttaacgct<br>
+cgtgccgacgttacgcttggcggcggcgcaaaaacctttgctgaaacggcaaccgctggt<br>
+gaatggcagggaaaaacgctgcgtgaacaggcacaggcgcgtggttatcagttggtgagc<br>
+gatgctgcctcactgaattcggtgacggaagcgaatcagcaaaaacccctgcttggcctg<br>
+tttgctgacggcaatatgccagtgcgctggctaggaccgaaagcaacgtaccatggcaat<br>
+atcgataagcccgcagtcacctgtacgccaaatccgcaacgtaatgacagtgtaccaacc<br>
+ctggcgcagatgaccgacaaagccattgaattgttgagtaaaaatgagaaaggctttttc<br>
+ctgcaagttgaaggtgcgtcaatcgataaacaggatcatgctgcgaatccttgtgggcaa<br>
+attggcgagacggtcgatctcgatgaagccgtacaacgggcgctggaattcgctaaaaag<br>
+gagggtaacacgctggtcatagtcaccgctgatcacgcccacgccagccagattgttgcg<br>
+ccggataccaaagctccgggcctcacccaggcgctaaataccaaagatggcgcagtgatg<br>
+gtgatgagttacgggaactccgaagaggattcacaagaacataccggcagtcagttgcgt<br>
+attgcggcgtatggcccgcatgccgccaatgttgttggactgaccgaccagaccgatctc<br>
+ttctacaccatgaaagccgctctggggctgaaataa</td></tr>
+
+</table></td></tr></table>
+<br></form></td></tr></table></td></tr></table>
+
+
+<a href="/dbget/">DBGET</a> integrated database retrieval system</div>
+
+</body>
+</html>
